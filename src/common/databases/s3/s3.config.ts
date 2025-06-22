@@ -43,11 +43,11 @@ export class S3Connection {
         Key: key,
         Body: userImage.buffer,
         ContentType: userImage.mimetype,
-      })
+      }),
     );
 
     // 직접 S3 URL 생성
-    const imageUrl = `https://${process.env.AWS_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`;
+    const imageUrl = `https://${process.env.AWS_S3_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`;
 
     return imageUrl;
   }
