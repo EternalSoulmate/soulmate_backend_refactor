@@ -26,7 +26,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "docker:test": "docker compose up --build",
-    "seed": "docker compose exec soulmate-backend npx ts-node src/common/testSeeding/seed.module.ts"
+    "seed": "docker compose exec soulmate-backend npx ts-node src/common/testSeeding/seed.module.ts",
+    "git:log": "git log --oneline --all --exclude=refs/stash"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.832.0",

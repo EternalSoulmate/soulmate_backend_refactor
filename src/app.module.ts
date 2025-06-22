@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { CommandModule } from 'nestjs-command';
 import { CustomCommandModule } from 'scripts/command.module';
+import { DatabaseModule } from './common/databases/database.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { CustomCommandModule } from 'scripts/command.module';
     }),
     CommandModule,
     CustomCommandModule,
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
